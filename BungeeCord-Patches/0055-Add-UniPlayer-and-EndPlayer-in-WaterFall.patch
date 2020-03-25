@@ -1,0 +1,32 @@
+From cf3d4be202d208cd6764e604d50f850edeaddc48 Mon Sep 17 00:00:00 2001
+From: IDerr <ibrahim@derraz.fr>
+Date: Wed, 25 Mar 2020 22:52:57 +0100
+Subject: [PATCH] Add UniPlayer and EndPlayer in WaterFall
+
+
+diff --git a/proxy/src/main/java/net/md_5/bungee/UserConnection.java b/proxy/src/main/java/net/md_5/bungee/UserConnection.java
+index 7c129221..1d7f6622 100644
+--- a/proxy/src/main/java/net/md_5/bungee/UserConnection.java
++++ b/proxy/src/main/java/net/md_5/bungee/UserConnection.java
+@@ -751,4 +751,18 @@ public final class UserConnection implements ProxiedPlayer
+         return entityRewrite == net.md_5.bungee.entitymap.EntityMap_Dummy.INSTANCE;
+     }
+     // Waterfall end
++    
++    /*
++    * Unitale patch
++    * 
++    */
++    private Object endPlayer;
++
++    public Object getEndPlayer() {
++      return endPlayer;
++    }
++    
++    public Object getUniPlayer() {
++      return endPlayer;
++    }
+ }
+-- 
+2.20.1
+
